@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Ambiental</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #f4f4f4;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.425);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background-image: url('/images/gilly-stewart-boE2xft0cAo-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.514);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .about {
+            padding: 60px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .about h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .registration {
+            padding: 60px 0;
+        }
+        .registration h2 {
+            color: var(--primary-color);
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Retiro Ambiental - 2024</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Retiro <span>Ambiental</span><br> no Rio Maria</h1><br>
+            <h2>07 de Dezembro de 2024</h2>
+            <p>Conecte-se a Natureza e faça o seu papel na preservação, retauração e melhoria do meio ambiente, A Mãe Natureza agradece.</p>
+            <a href="#registration" class="btn">PARTICIPAR</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>
+                Somos uma equipe comprometida em transformar nosso relacionamento com o meio ambiente através de ações práticas e inspiradoras. Com experiência em gestão de projetos ambientais e um profundo respeito pela natureza, unimos nossas habilidades para criar experiências únicas de imersão que capacitem e conscientizem os participantes sobre a importância da preservação ambiental.
+                
+                Nosso objetivo é proporcionar um espaço de conexão com a natureza, onde cada um possa refletir sobre o impacto de suas escolhas e descobrir novas formas de viver em harmonia com o planeta. Neste retiro, reuniremos profissionais e entusiastas dedicados a fomentar práticas sustentáveis e a compartilhar conhecimento para fortalecer o compromisso coletivo com o meio ambiente.
+                
+                Estamos prontos para proporcionar uma jornada de aprendizado, reflexão e mudança. Junte-se a nós e venha fazer parte desta transformação!</p>
+        </div>
+    </section>
+
+    <section id="registration" class="registration">
+        <div class="container">
+            <h2>Formulário de Inscrição</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="ex.: 820000000" required>
+                </div>
+                <div class="form-group">
+                    <label for="phonefamily">Telefone de familiar:</label>
+                    <input type="tel" id="phonefamily" name="phonefamily" placeholder="ex.: 840000000" required>
+                </div>
+                <div class="form-group">
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" placeholder="Maior de 17 anos" required>
+                </div>
+                <div class="form-group">
+                    <label for="alergias">Alergias:</label>
+                    <input type="text" id="alergias" name="alergias" placeholder="ex.: Alergia a camarão, peixe, etc." required>
+                </div>
+                <div class="form-group">
+                    <label for="dc">Sofre de alguma doença crônica?</label>
+                    <input type="text" id="dc" name="dc" placeholder="se sim, qual?" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="quer nos dizer alguma coisa?"></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+    
+            const nome = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('phone').value;
+            const idade = document.getElementById('idade').value;
+            const telefonefamilia = document.getElementById('phonefamily').value;
+            const alergias = document.getElementById('alergias').value;
+            const doencacronica = document.getElementById('dc').value;
+            const mensagem = document.getElementById('message').value;
+    
+            // Enviar para Google Sheets
+            try {
+                const response = await axios.post('https://api.sheetbest.com/sheets/34126950-dc49-4b99-9d9b-755d5811c008', {
+                    nome,
+                    email,
+                    telefone,
+                    telefonefamilia,
+                    idade,
+                    alergias,
+                    doencacronica,
+                    mensagem,
+                });
+                console.log('Enviado para Google Sheets:', response.data);
+            } catch (error) {
+                console.error('Erro ao enviar para Google Sheets:', error);
+            }
+    
+            // Enviar para WhatsApp
+            const whatsappMessage = `Nova inscrição:\n\nNome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nTelefone de Familiar: ${telefonefamilia}\nIdade: ${idade}\nAlergias: ${alergias}\nDoença Crônica: ${doencacronica}\nMensagem: ${mensagem}`;
+            const whatsappNumber = '258868427386'; 
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+    
+            window.open(whatsappUrl, '_blank');
+    
+            alert('Inscrição enviada com sucesso!');
+            this.reset();
+        });
+    </script>
+    
+</body>
+</html>
