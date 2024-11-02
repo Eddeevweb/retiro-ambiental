@@ -155,6 +155,94 @@
                 font-size: 1rem;
             }
         }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            width: 150px;
+            
+            object-fit: contain;
+        }
+
+        /* Estilo para telas menores (mobile) */
+        @media (max-width: 768px) {
+            .logo-container {
+                flex-wrap: wrap;
+                justify-content: center; /* Centraliza as imagens na linha */
+            }
+            
+            .logo-container img {
+                flex: 1 1 45%;
+                max-width: 100px;
+                margin: 5px;
+            }
+
+            /* Ajuste para a última imagem, garantindo que ela fique centralizada em uma nova linha */
+            .logo-container img:nth-child(5) {
+                flex: 1 1 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+       /* Estilo para a caixa de vidro */
+        .glass-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            width: 90%;
+            max-width: 700px;
+            margin: 20px auto;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: move 8s ease-in-out infinite alternate;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Estilo para o texto */
+        .footer-text {
+            font-size: 18px;
+            color: #202220;
+            font-weight: 500;
+        }
+
+        .footer-text span {
+            font-weight: bold;
+            color: #32CD32;
+        }
+
+        /* Estilo para a foto de perfil circular */
+        .profile-photo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 4px solid #32CD32;
+            object-fit: cover;
+        }
+
+        /* Animação para o movimento */
+        @keyframes move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(15px); }
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -169,6 +257,14 @@
             <h1>Retiro <span>Ambiental</span><br> no Sengo</h1><br>
             <h2>07 de Dezembro de 2024</h2>
             <p>Conecte-se a Natureza e faça o seu papel na preservação, restauração e melhoria do meio ambiente, A Mãe Natureza agradece.</p>
+            <div class="logo-container">
+                <img src="images/rotaract 100x50.png" alt="Logo rotaract">
+                <img src="images/ame 100x50.png" alt="Logo AME">
+                <img src="images/aiesec 100x50.png" alt="Logo aiesec">
+                <img src="images/ecoteam 100x50.png" alt="Logo moz eco team">
+                <img src="images/atk 100x50.png" alt="Logo atk">
+            </div>
+            
             <a href="#registration" class="btn">PARTICIPAR</a>
         </div>
     </section>
@@ -223,7 +319,28 @@
                 </div>
                 <button type="submit" class="btn">Enviar</button>
             </form>
+            <div class="logo-container">
+                <img src="images/rotaract 100x50.png" alt="Logo rotaract">
+                <img src="images/ame 100x50.png" alt="Logo AME">
+                <img src="images/aiesec 100x50.png" alt="Logo aiesec">
+                <img src="images/ecoteam 100x50.png" alt="Logo moz eco team">
+                <img src="images/atk 100x50.png" alt="Logo atk">
+            </div>
         </div>
+        <div class="glass-container">
+            <div class="glass-content">
+                <p class="footer-text">
+                    Site criado por <span>Edmilson Braga</span> <br><br>
+                    <span>Contato:</span> <br>
+                    Email: edmilsonbraga0124@gmail.com <br>
+                    Telefone: 86 842 7386
+                </p>
+            </div>
+            <div class="profile-photo-container">
+                <img src="images/1.png" alt="Edmilson Braga" class="profile-photo">
+            </div>
+        </div>
+        
     </section>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -267,6 +384,15 @@
             alert('Inscrição enviada com sucesso!');
             this.reset();
         });
+
+            document.addEventListener("DOMContentLoaded", function() {
+            const glassContainer = document.querySelector('.glass-container');
+
+            setInterval(() => {
+                glassContainer.style.transform = `translateX(${Math.random() * 10 - 5}px)`;
+            }, 1000);
+        });
+
     </script>
     
 </body>
